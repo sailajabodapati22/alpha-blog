@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
  resources :articles
   get 'signup', to: 'users#new'
+  
+  resources :categories, except: [:destroy]
 
 resources :users, except: [:new]
   get 'login', to: 'sessions#new'
